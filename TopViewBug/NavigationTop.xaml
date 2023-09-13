@@ -1,0 +1,18 @@
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TopViewBug.NavigationTop">
+    <Grid BackgroundColor="Blue">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="{OnPlatform Default=50, Android=70}"/>
+            <ColumnDefinition Width="{OnPlatform Default=50, Android=70}"/>
+        </Grid.ColumnDefinitions>
+        <Button Text="&lt;" FontSize="30" BackgroundColor="Transparent" TextColor="White" Margin="0" Padding="8, 0, 8, 0" Clicked="Back" Grid.Column="0"/>
+        <Label Text="Tanulas" TextColor="White" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Margin="6" FontSize="20" x:Name="PageName" Grid.Column="1"/>
+        <Label TextColor="#00AEEF" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontSize="20" Margin="6" x:Name="PercentText" Grid.Column="2"/>
+        <ImageButton WidthRequest="{OnPlatform Default=50, iOS=30, Android=70}" HorizontalOptions="End" BackgroundColor="Transparent" Grid.Column="3" Aspect="AspectFit" HeightRequest="{OnPlatform Android=50, iOS=30, Default=40}"/>
+        <ImageButton WidthRequest="{OnPlatform Default=50, iOS=30, Android=70}" HorizontalOptions="End" BackgroundColor="Transparent" Grid.Column="4" Aspect="AspectFit" HeightRequest="{OnPlatform Android=50, iOS=30, Default=40}"/>
+    </Grid>
+</ContentView>
